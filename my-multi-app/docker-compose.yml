@@ -4,9 +4,9 @@ services:
   web:
     image: my-node-app
     ports:
-      -"8080:3000"
+      - "8080:3000"
     volumes:
-      -./my-node-app:/app
+      - ./my-node-app:/app
     depends_on:
       - db
     environment:
@@ -27,4 +27,4 @@ services:
        POSTGRES_DB: mydatabase
 
 volumes:
-  postgres-data: /var/lib/postgresql/data
+  postgres-data:
